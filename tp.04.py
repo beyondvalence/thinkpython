@@ -60,11 +60,24 @@ arc(bob, 150, 300)
 
 #4.7 refactoring using polyline
 def polyline(t, length, n, angle):
+	"""Draws a polygon with n sides
+	
+	t: Turtle
+	length: length of each side
+	n: number of sides
+	angle: exterior angle of n sided polygon
+	"""
 	for i in range(n):
 		fd(t, length)
 		lt(t, angle)
 		
 def arc(t, radius, angle):
+	"""Draws a portion of a polygon
+	
+	t: Turtle
+	radius: radius
+	angle: angle subtended by the arc, in degrees
+	"""
 	arc_l = 2 * pi * radius * angle / 360 
 	n = int(arc_l/3)+1
 	step_l = arc_l / n 
@@ -72,4 +85,9 @@ def arc(t, radius, angle):
 	polyline(t, length=arc_l, n, angle=step_angle)
 
 def circle(t, r):
+	"""Draws circle with given radius
+	
+	t: Turtle
+	r: radius
+	"""
 	arc(t, r, 360)
