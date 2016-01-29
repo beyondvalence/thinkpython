@@ -55,4 +55,6 @@ def fermat_prompt():
 		else:
 			return
 			
-fermat_prompt()
+
+if __name__ == "__main__":			
+	fermat_prompt()
