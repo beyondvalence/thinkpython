@@ -44,4 +44,36 @@ hypotenuse_prompt()
 def circle_area(xc, yc, xp, yp):
 	return area(distance(xc, yc, xp, yp))
 	
+#6.4 boolean functions
+def is_between(x,y,z):
+	if y>=x and y<=z:
+		return True
+	else:
+		return False
+		
+#6.5 more recursion	
+def factorial(n):
+	if n==0:
+		return 1
+	else:
+		recurse = factorial(n-1)
+		result = n * recurse
+		print(result)
+		return result
+
+factorial(4)
+
+# 6.7 fibonacci, one more example
+def fibonacci(n):
+	if n==0:
+		return 0
+	elif n==1:
+		return 1
+	else:
+		return fibonacci(n-1) + fibonacci(n-2)
+		
+num = fibonacci(7)
+print(num)
+
+	
 	
