@@ -18,6 +18,12 @@ def compare(x,y):
 		return -1
 
 #6.2 incremental development
+def distance(x1, y1, x2, y2):
+	dx = x2 - x1
+	dy = y2 - y1
+	dsquared = dx**2 + dy**2
+	return math.sqrt(dsquared)
+
 #6.2 E2, right triangle hypotenuse
 def hypotenuse(left, right):
 	left_sq = left*left
@@ -34,4 +40,8 @@ def hypotenuse_prompt():
 	
 hypotenuse_prompt()
 
-#6.3 composition
+#6.3 composition of functions within each other
+def circle_area(xc, yc, xp, yp):
+	return area(distance(xc, yc, xp, yp))
+	
+	
