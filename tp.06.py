@@ -18,6 +18,7 @@ def compare(x,y):
 		return -1
 
 #6.2 incremental development
+print("6.2 incremental development")
 def distance(x1, y1, x2, y2):
 	dx = x2 - x1
 	dy = y2 - y1
@@ -52,6 +53,7 @@ def is_between(x,y,z):
 		return False
 		
 #6.5 more recursion	
+print("6.5 factorials")
 def factorial(n):
 	if n==0:
 		return 1
@@ -64,6 +66,7 @@ def factorial(n):
 factorial(4)
 
 # 6.7 fibonacci, one more example
+print("6.7 fibonacci seq")
 def fibonacci(n):
 	if n==0:
 		return 0
@@ -75,5 +78,20 @@ def fibonacci(n):
 num = fibonacci(7)
 print(num)
 
-	
-	
+# 6.8 checking types
+print("6.8 factorial with type check")
+def factorial(n):
+	if not isinstance(n, int):
+		print("Factorial is only defined for integers.")
+		return None
+	elif n < 0:
+		print("Factorial is not defined for negative integers.")
+		return None
+	elif n == 0:
+		return 1
+	else:
+		return n * factorial(n-1)
+		
+factorial('hello')
+factorial(2.3333333)
+factorial(-53)	
