@@ -32,7 +32,7 @@ def sq(a, x, delta):
 	while True:
 		y = (x + (a/x))/2 
 		error = abs(x-y)
-		if abs(x-y) < delta:
+		if error < delta:
 			print("estimated square root:", y)
 			print("error: ", error)
 			break
@@ -41,3 +41,20 @@ def sq(a, x, delta):
 		print("error: ", error)
 		
 sq(14, 3, .00001)
+
+# 7.9 E3, print table of square roots, 
+# comparing Newton's function and math.sqrt
+print("7.9 E3 square root tables")
+import math
+def test_square_root(n):
+	for i in range(1,n+1):
+		x = i - 0.5
+		while True:
+			y = (x + i/x)/2 
+			error = abs(x-y)
+			if error < 0.00000001:
+				break
+			x = y
+		print(i, y, math.sqrt(i), abs(y-math.sqrt(i)))
+		
+test_square_root(n=9)
