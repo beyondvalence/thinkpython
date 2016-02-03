@@ -39,3 +39,25 @@ for letter in prefixes:
 		print(letter+'u'+suffix)
 	else:
 		print(letter+suffix)
+		
+# 8.4 string slices
+print("8.4 string slices")
+s = 'Monty Python'
+print(s[0:5])
+print(s[6:12])
+
+# 8.4 E3, slicing
+print("8.4 E3, what happens when first and second indexes are omitted")
+print(fruit[:]) # means the entire string
+
+# 8.5 immutable strings
+print("8.5 immutable strings")
+greeting = "hello, world!"
+print(greeting)
+print("greeting[0] = 'J', does not work")
+print("cannot change the string, but you can create a new one")
+new_greeting = 'J' + greeting[1:]
+print(new_greeting)
+
+# 8.6 searching
+print("8.6 searching")
