@@ -58,3 +58,21 @@ def test_square_root(n):
 		print(i, y, math.sqrt(i), abs(y-math.sqrt(i)))
 		
 test_square_root(n=9)
+
+# 7.9 E4, eval function
+print("7.9 E4 eval function")
+import math
+def eval_loop():
+	print("Type 'done' to quit")
+	text2 = "no expression evaluated"
+	while True:
+		text = input("enter math function\n")
+		if text == "done":
+			print("last evaluated expression:")
+			print(text2)
+			break		
+		text2 = text
+		result = eval(text2)
+		print(result)
+		
+eval_loop()
