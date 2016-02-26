@@ -61,3 +61,12 @@ print(new_greeting)
 
 # 8.6 searching
 print("8.6 searching")
+def findd(word, letter, n=0):
+	index = n
+	print("Looking for", letter, "in", word, ":")
+	while index < len(word):
+		if word[index] == letter:
+			print(letter, "found at position", index+1)
+		index += 1
+	return -1
+findd("correlation", "o")
