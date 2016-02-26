@@ -112,7 +112,9 @@ print("\n8.8 string methods")
 print("\n8.8 E7, modified E6 for total counts")
 def count(word, letter, start=0):
 	w = word.lower()
+	print(w)
 	l = letter.lower()
+	print(l)
 	l_l = len(l)
 	loc = []
 	while start < len(w):
@@ -129,3 +131,42 @@ if -1 in output:
 	print("number found:", len(output)-1)
 else:
 	print("number found:", len(output))
+	
+# 8.9 in operator
+print("\n8.9, in operator")
+def in_both(word1, word2):
+	for letter in word1:
+		if letter in word2:
+			print(letter)
+in_both("orangesa", "apples") # will print out an extra 'a' at the ends
+
+# 8.10 string comparison
+print("\n8.10, string comparison")
+def compare():
+	word = input("type in a word: ")
+	if word == "banana":
+		print('OKAY, banana!')
+	elif word < 'banana':
+		print(word, "comes before banana")
+	elif word > 'banana':
+		print(word, "comes after banana")
+compare()
+
+# 8.11 debugging
+print("\n8.11, debugging")
+print("8.11 E10, errors debugged from reverse func"
+def is_reverse(word1, word2):
+	if len(word1) != len(word2):
+		return False
+	i = 0
+	j = len(word2)-1
+
+	while j > -1:
+		if word1[i] != word2[j]:
+			return False
+		i = i + 1
+		j = j - 1
+
+	return True
+output = is_reverse("stop", "pots")
+print("Is reverse?", output)
